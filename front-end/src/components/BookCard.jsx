@@ -6,9 +6,9 @@ export default function BookCard({id}) {
 
     return (
         <Link to={`/${id}`} className="bookcard max-w-sm rounded overflow-hidden shadow-lg mb-10 
-        md:w-[calc(100%/3)]
-        lg:w-[calc(100%/5)]
-        xl:w-[calc(100%/6)] 
+            md:w-[calc(100%/3)]
+            lg:w-[calc(100%/5)]
+            xl:w-[calc(100%/6)] 
         ">
             <img src={bookCover} alt="Shining" className="" />
             <div className="bookcard_info p-6">
