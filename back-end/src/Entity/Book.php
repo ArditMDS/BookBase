@@ -35,6 +35,9 @@ class Book
     #[ORM\ManyToOne(inversedBy: 'book_id')]
     private ?Author $author = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $release_date = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -127,6 +130,18 @@ class Book
     public function setAuthor(?Author $author): static
     {
         $this->author = $author;
+
+        return $this;
+    }
+
+    public function getReleaseDate(): ?string
+    {
+        return $this->release_date;
+    }
+
+    public function setReleaseDate(?string $release_date): static
+    {
+        $this->release_date = $release_date;
 
         return $this;
     }

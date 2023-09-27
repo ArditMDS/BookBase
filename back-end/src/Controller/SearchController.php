@@ -33,6 +33,7 @@ class SearchController extends AbstractController
                 'year' => $book->getYear(),
                 'genre' => $book->getGenre(),
                 'editor' => $book->getEditor(),
+                'date_release' => $book->getReleaseDate(),
                 'auteur' => $authorInfo,
             ];
 
