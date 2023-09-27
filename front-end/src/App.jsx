@@ -7,14 +7,14 @@ import {
 
 import Layout from './components/Layout'
 import IndexPage from './components/pages/IndexPage'
-import Book from './components/pages/Book'
+import BookPage from './components/pages/BookPage'
 
 export default function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Layout /> }>
       <Route index element={ <IndexPage /> } />
-      <Route path="book" element={<Book />} />
+      <Route path="1" element={<BookPage />} />
     </Route>
   ))
 

@@ -2,3 +2,7 @@
   color: #213547;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+.container {
+  margin: 0 auto;
+}
