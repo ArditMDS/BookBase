@@ -1,13 +1,12 @@
 import BookCard from "../BookCard"
 
-export default function IndexPage () {
+export default function SearchResult(props) {
     return (
         <main>
-            <h1 className="pt-10 text-5xl font-bold text-center">Liste de livres</h1>
-            <div className="container book-card-container 
-            md:gap-[calc(100%/3)]
-            lg:gap-[calc(100%/15)]
-            xl:gap-[calc(100%/24)]
+            <div className="container">
+                <h1 className="pt-10 text-3xl font-bold">Resultats de recherche: {`Stephen King`}</h1>
+            </div>
+            <div className="container book-card-container
             
             ">
                 <BookCard />
