@@ -45,4 +45,16 @@ class BookRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+    public function filterBySearch(string $value): array
+    {
+        return $this->createQueryBuilder('b')
+            ->innerJoin('b.author', 'a')
+            ->where('b.title LIKE :value')
+            ->orWhere('a.first_name LIKE :value')
+            ->orWhere('a.last_name LIKE :value')
+            ->setParameter('value', '%' . $value . '%')
+            ->getQuery()
+            ->getResult();
+
+    }
 }
