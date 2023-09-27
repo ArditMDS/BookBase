@@ -6,7 +6,6 @@ use App\Entity\Book;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -22,7 +21,6 @@ class BookController extends AbstractController
                 'id' => $book->getId(),
                 'title' => $book->getTitle(),
                 'synopsis' => $book->getSynopsis(),
-                'author' => $book->getAuthor(),
                 'image' => $book->getImage(),
                 'year' => $book->getYear(),
                 'genre' => $book->getGenre(),
@@ -41,7 +39,6 @@ class BookController extends AbstractController
             'id' => $book->getId(),
             'title' => $book->getTitle(),
             'synopsis' => $book->getSynopsis(),
-            'author' => $book->getAuthor(),
             'image' => $book->getImage(),
             'year' => $book->getYear(),
             'genre' => $book->getGenre(),
@@ -49,4 +46,6 @@ class BookController extends AbstractController
         ];
         return new JsonResponse(['result' => $result, 'code_reponse' => Response::HTTP_OK]);
     }
+
+
 }
