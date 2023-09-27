@@ -21,9 +21,6 @@ class Book
     private ?string $synopsis = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $author = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $image = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
@@ -34,6 +31,9 @@ class Book
 
     #[ORM\Column(length: 255)]
     private ?string $editor = null;
+
+    #[ORM\ManyToOne(inversedBy: 'book_id')]
+    private ?Author $author = null;
 
     public function getId(): ?int
     {
@@ -67,18 +67,6 @@ class Book
     public function setSynopsis(string $synopsis): static
     {
         $this->synopsis = $synopsis;
-
-        return $this;
-    }
-
-    public function getAuthor(): ?string
-    {
-        return $this->author;
-    }
-
-    public function setAuthor(string $author): static
-    {
-        $this->author = $author;
 
         return $this;
     }
@@ -130,4 +118,17 @@ class Book
 
         return $this;
     }
+
+    public function getAuthor(): ?Author
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?Author $author): static
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
 }
