@@ -48,6 +48,7 @@ class BookRepository extends ServiceEntityRepository
     public function filterBySearch(string $value): array
     {
         return $this->createQueryBuilder('b')
+            ->select('b', 'a')
             ->innerJoin('b.author', 'a')
             ->where('b.title LIKE :value')
             ->orWhere('a.first_name LIKE :value')

@@ -24,7 +24,8 @@ class AuthorController extends AbstractController
                 'image' => $book->getImage(),
                 'year' => $book->getYear(),
                 'genre' => $book->getGenre(),
-                'editor' => $book->getEditor()
+                'editor' => $book->getEditor(),
+                'date_release' => $book->getReleaseDate()
             ];
     }
         return new JsonResponse(['result' => $result, 'code_reponse' => Response::HTTP_OK]);
