@@ -30,7 +30,7 @@ class BookController extends AbstractController
     }
         return new JsonResponse(['result' => $result, 'code_reponse' => Response::HTTP_OK]);
     }
-
+    // commentaire
     #[Route('/get-book/{id}', name: 'app_get_one_book', methods: ['GET'])]
     public function getBookById(EntityManagerInterface $entityManager, $id): JsonResponse
     {
