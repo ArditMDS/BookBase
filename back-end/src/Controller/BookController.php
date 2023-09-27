@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BookController extends AbstractController
 {
     #[Route('/all-books', name: 'app_get_all_books', methods: ['GET'])]
-    public function getAllBooks(Request $request, EntityManagerInterface $entityManager): JsonResponse
+    public function getAllBooks(EntityManagerInterface $entityManager): JsonResponse
     {
         $books = $entityManager->getRepository(Book::class)->findAll();
         $result = [];
@@ -29,6 +29,24 @@ class BookController extends AbstractController
                 'editor' => $book->getEditor()
             ];
     }
+        return new JsonResponse(['result' => $result, 'code_reponse' => Response::HTTP_OK]);
+    }
+
+    #[Route('/get-book/{id}', name: 'app_get_one_book', methods: ['GET'])]
+    public function getBookById(EntityManagerInterface $entityManager, $id): JsonResponse
+    {
+        $book = $entityManager->getRepository(Book::class)->findOneBy(['id' => $id]);
+        $result = [];
+        $result[] = [
+            'id' => $book->getId(),
+            'title' => $book->getTitle(),
+            'synopsis' => $book->getSynopsis(),
+            'author' => $book->getAuthor(),
+            'image' => $book->getImage(),
+            'year' => $book->getYear(),
+            'genre' => $book->getGenre(),
+            'editor' => $book->getEditor()
+        ];
         return new JsonResponse(['result' => $result, 'code_reponse' => Response::HTTP_OK]);
     }
 }
