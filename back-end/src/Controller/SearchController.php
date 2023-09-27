@@ -19,11 +19,10 @@ class SearchController extends AbstractController
         $result = [];
         foreach ($filteredBooks as $book) {
             $authorInfo = [];
-            $author = $entityManager->getRepository(Author::class)->findOneBy(['id' => $book->getAuthor()]);
             $authorInfo [] = [
-                'id' => $author->getId(),
-                'first_name' => $author->getFirstName(),
-                'last_name' => $author->getLastName(),
+                'id' => $book->getAuthor()->getId(),
+                'first_name' => $book->getAuthor()->getFirstName(),
+                'last_name' => $book->getAuthor()->getLastName(),
             ];
             $result [] = [
                 'id' => $book->getId(),
@@ -33,7 +32,6 @@ class SearchController extends AbstractController
                 'year' => $book->getYear(),
                 'genre' => $book->getGenre(),
                 'editor' => $book->getEditor(),
-                'date_release' => $book->getReleaseDate(),
                 'auteur' => $authorInfo,
             ];
 
