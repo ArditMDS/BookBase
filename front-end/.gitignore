@@ -24,4 +24,6 @@ dist
 *.sw?
 
 *.cache
-.idea
+*.idea
+
+/src/output.css
