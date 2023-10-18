@@ -25,7 +25,27 @@ export default function App() {
       }
     })
       .then(res => res.json())
-      .then(data => setBookData(data.result))
+      .then((data) => {
+        if(data.code_reponse !== 200)  {
+          fetch("https://127.0.0.1:8000/all-books", {
+            method: "GET",
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+              'Content-Type': 'application/json'
+            }
+          })
+              .then(res => res.json())
+              .then(data => setBookData(data.result))
+              .catch((error) => {
+                console.error('error', error)
+              })
+        } else {
+          setBookData(data.result)
+        }
+      })
+        .catch((error) => {
+          console.error('error', error)
+        })
   }, [])
 
   console.log(bookData);
