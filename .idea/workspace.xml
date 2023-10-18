@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="16afca03-c7b0-41c1-ac9b-5da5f1ce35ce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../front-end/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/output.css" afterDir="false" />
-    </list>
+    <list default="true" id="dd8d3f85-a7af-4473-b998-075bb8693045" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2WvaI6xEBpZ7HTI75kb4A0s898t" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2WvTTvAmNh8iEeSwMzuVDEr2hd4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,8 +26,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/33783/PhpstormProjects/BookBase/BookBase/back-end",
+    "git-widget-placeholder": "feature/fixFetch",
+    "last_opened_file_path": "C:/Users/33783/PhpstormProjects/BookBase/BookBase",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -35,12 +39,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="16afca03-c7b0-41c1-ac9b-5da5f1ce35ce" name="Changes" comment="" />
-      <created>1697615424963</created>
+      <changelist id="dd8d3f85-a7af-4473-b998-075bb8693045" name="Changes" comment="" />
+      <created>1697612065464</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1697615424963</updated>
-      <workItem from="1697615427096" duration="329000" />
+      <updated>1697612065464</updated>
+      <workItem from="1697612068797" duration="2537000" />
+      <workItem from="1697615577865" duration="2091000" />
     </task>
     <servers />
   </component>
