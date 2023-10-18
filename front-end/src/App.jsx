@@ -17,7 +17,13 @@ export default function App() {
   const [bookData, setBookData] = useState([])
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/all-books")
+    fetch("http://127.0.0.1:8000/all-books", {
+      method: "GET",
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    })
       .then(res => res.json())
       .then(data => setBookData(data.result))
   }, [])
