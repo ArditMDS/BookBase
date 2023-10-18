@@ -6,7 +6,8 @@ export default function BookCard({id}) {
 
     return (
         <Link to={`/${id}`} className="bookcard max-w-sm rounded overflow-hidden shadow-lg mb-10 
-        md:w-[calc(100%/3)]
+        w-90% mx-auto
+        md:w-[calc(100%/3)] md:mx-0
         lg:w-[calc(100%/5)]
         xl:w-[calc(100%/6)] 
         ">
