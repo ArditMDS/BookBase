@@ -6,8 +6,10 @@ export default function SearchResult(props) {
             <div className="container">
                 <h1 className="pt-10 text-3xl font-bold">Resultats de recherche: {`Stephen King`}</h1>
             </div>
-            <div className="container book-card-container
-            
+            <div className="container book-card-container 
+                md:gap-[calc(100%/3)]
+                lg:gap-[calc(100%/15)]
+                xl:gap-[calc(100%/24)]
             ">
                 <BookCard />
                 <BookCard />

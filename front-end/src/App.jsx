@@ -5,12 +5,30 @@ import {
   RouterProvider
 } from 'react-router-dom'
 
+import { useState, useEffect } from 'react'
+
 import Layout from './components/Layout'
 import IndexPage from './components/pages/IndexPage'
 import BookPage from './components/pages/BookPage'
 import SearchResult from './components/pages/SearchResult'
 
 export default function App() {
+
+  const [bookData, setBookData] = useState([])
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/all-books", {
+      method: "GET",
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(data => setBookData(data.result))
+  }, [])
+
+  console.log(bookData);
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Layout /> }>
